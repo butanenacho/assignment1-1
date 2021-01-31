@@ -1,40 +1,114 @@
-//INCLUDING HEADER FILES
-#include<iostream>
-#include<string>
-#include<iomanip>
+#include <iostream>
+
+
 using namespace std;
-/*
-Description: This code works for INF SUPERMARKET
-*/
+
 int main()
 {
-//VARIABLE DECLARATION/INITIALIZATION
-string customer_name;
-int customer_id;
-int quantity;
-string buy_item;
-double customer_money;
-double balance;
-const double vat=0.12;
-double printer_price = 650;
-double phone_price = 350;
-double table_price = 95;
-string item1="Printer";
-string item2="Phone";
-string item3="Table";
-double total_cost;
-double total_amount_paid;
-//END OF VARIABLE DECLARATION
-//SERVICES OFFERED IN THE COMPANY
-cout << "We offer two services in our company\n"<<endl;
-cout << "1.Purchasing an item\n"<<endl;
-cout << "2.Making Enquiries\n"<<endl;
-cout << "But for Now, you can only purchase an item\n"<<endl;
-//CUSTOMER'S NAME
-cout << "Please what is your Full Name:\n"<<endl;
-getline(cin, customer_name);
-cout <<endl;
-//CUSTOMER'S UNIQUE ID
-cout <<"Please Kindly enter your ID in number\n"<<endl;
-cin >> customer_id;
-cout <<endl;
+    //DECLARATION
+    string name;
+    double id;
+    const double vat=0.12;
+    string input;
+    int quantity;
+    int money;
+    double balance;
+    double totalCost;
+    double printerprice;
+    double phoneprice;
+    double tableprice;
+
+    double totalAmount;
+    printerprice=200;
+    phoneprice=400;
+    tableprice=100;
+
+
+
+    cout<<"SUPER COMPANY"<<endl;
+    cout<<endl;
+    cout<<"Two things are done in the company"<<endl;
+    cout<<"1.Purchasing an item"<<endl;
+    cout<<"2.Make an enquiries"<<endl;
+    cout<<endl;
+    cout<<"What is your name"<<endl;
+    getline(cin,name);
+    cout<<endl;
+
+    cout<<"What is your unique ID"<<endl;
+    cin>>id;
+    cout<<"Item we sell"<<endl;
+    cout<<"1.Printer = GHC200"<<endl;
+    cout<<"2.Phone = GHC400"<<endl;
+    cout<<"3.Table = GHC100"<<endl;
+
+    cout<<"What do you want to buy"<<endl;
+    cin>>input;
+    cout<<"How many do you want to buy"<<endl;
+    cin>>quantity;
+    cout<<"How much do you have in your wallet"<<endl;
+    cin>>money;
+
+
+     if((money<(printerprice*quantity+vat)) || (money<(phoneprice*quantity+vat)) || (money<(tableprice*quantity+vat))){
+        cout<<"sorry! your money can't afford the "<<input<<endl;
+     }
+
+
+    else if (input=="Printer" || input=="printer" || input=="PRINTER"){
+        totalCost=(printerprice*quantity);
+        cout<<"The total cost of the "<<input<<" is GHC"<<totalCost<<endl;
+        totalAmount=(printerprice*quantity+vat);
+        cout<<"Total amount with VAT is GHC"<<totalAmount<<endl;
+        balance=(money-totalAmount);
+        cout<<"Your balance is GHC"<<balance<<endl;
+        cout<<endl;
+        cout<<"..........RECIEPT..........."<<endl;
+        cout<<"The name of the customer is"<<name<<endl;
+        cout<<"The unique ID is "<<id<<endl;
+        cout<<"Item purchased is "<<input<<endl;
+        cout<<"The VAT is 12%"<<endl;
+        cout<<"The total cost is "<<totalCost<<endl;
+        cout<<"The total Amount paid is "<<totalAmount<<endl;
+        cout<<"Your balance is "<<balance<<endl;
+    }
+
+else if(input=="Phone" || input=="phone" || input=="PHONE"){
+        totalCost=(phoneprice*quantity);
+        cout<<"The total cost of the "<<input<<" is GHC"<<totalCost<<endl;
+        totalAmount=(phoneprice*quantity+vat);
+        cout<<"Total amount with VAT is GHC"<<totalAmount<<endl;
+        balance=(money-totalAmount);
+        cout<<"Your balance is GHC"<<balance<<endl;
+        cout<<endl;
+        cout<<"..........RECIEPT..........."<<endl;
+        cout<<"The name of the customer is "<<name<<endl;
+        cout<<"The unique ID is "<<id<<endl;
+        cout<<"Item purchased is "<<input<<endl;
+        cout<<"The VAT is 12%"<<endl;
+        cout<<"The total cost is "<<totalCost<<endl;
+        cout<<"The total Amount paid is "<<totalAmount<<endl;
+        cout<<"Your balance is "<<balance<<endl;
+
+
+    }
+    else if(input=="table" || input=="Table" || input=="TABLE"){
+        totalCost=(tableprice*quantity);
+        cout<<"The total cost of the "<<input<<" is GHC"<<totalCost<<endl;
+        totalAmount=(tableprice*quantity+vat);
+        cout<<"Total amount with VAT is GHC"<<totalAmount<<endl;
+        balance=(money-totalAmount);
+        cout<<"Your balance is GHC"<<balance<<endl;
+        cout<<endl;
+        cout<<"..........RECIEPT..........."<<endl;
+        cout<<"The name of the customer is "<<name<<endl;
+        cout<<"The unique ID is "<<id<<endl;
+        cout<<"Item purchased is "<<input<<endl;
+        cout<<"The VAT is 12%"<<endl;
+        cout<<"The total cost is "<<totalCost<<endl;
+        cout<<"The total Amount paid is "<<totalAmount<<endl;
+        cout<<"Your balance is "<<balance<<endl;
+    }
+
+    return 0;
+}
