@@ -14,9 +14,9 @@ int main()
     int money;
     double balance;
     double totalCost;
-    double printerprice;
-    double phoneprice;
-    double tableprice;
+    double printerPrice;
+    double phonePrice;
+    double tablePrice;
 
     double totalAmount;
     printerprice=200;
