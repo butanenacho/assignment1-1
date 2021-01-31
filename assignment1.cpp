@@ -17,11 +17,6 @@ double customer_money;
 double balance;
 const double vat=0.12;
 double printer_price = 650;
-Name: Timothy Yinvi
-Copyright:@2021
-Author: Timothy Yinvi
-Date: 31/01/21
-2
 double phone_price = 350;
 double table_price = 95;
 string item1="Printer";
