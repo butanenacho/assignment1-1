@@ -90,7 +90,6 @@ else if(input=="Phone" || input=="phone" || input=="PHONE"){
         cout<<"The total Amount paid is "<<totalAmount<<endl;
         cout<<"Your balance is "<<balance<<endl;
 
-
     }
     else if(input=="table" || input=="Table" || input=="TABLE"){
         totalCost=(tableprice*quantity);
