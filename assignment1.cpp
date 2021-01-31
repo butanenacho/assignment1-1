@@ -14,9 +14,9 @@ int main()
     int money;
     double balance;
     double totalCost;
-    double printerPrice;
-    double phonePrice;
-    double tablePrice;
+    double printerprice;
+    double phoneprice;
+    double tableprice;
 
     double totalAmount;
     printerprice=200;
@@ -89,7 +89,6 @@ else if(input=="Phone" || input=="phone" || input=="PHONE"){
         cout<<"The total cost is "<<totalCost<<endl;
         cout<<"The total Amount paid is "<<totalAmount<<endl;
         cout<<"Your balance is "<<balance<<endl;
-
 
     }
     else if(input=="table" || input=="Table" || input=="TABLE"){
